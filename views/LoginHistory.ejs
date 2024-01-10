@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Navbar style */
+        .navbar {
+            display: flex; /* Added */
+            justify-content: space-between; /* Added */
+            align-items: center; /* Added */
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-direction: row; /* Added */
+        }
+
+        .navbar-nav li {
+            display: inline-block; /* Added */
+            margin-right: 10px; /* Added */
+        }
+
+        .navbar-nav li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .navbar-nav li a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Welcome</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Login History</a>
+                </li>
+                <li class="nav-item">
+                    <form id="signoutForm" action="/api/signout" method="POST">
+                        <button type="submit" class="btn btn-link nav-link">Sign Out</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Login Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% loginHistory.forEach((history) => { %>
+                <tr>
+                    <td><%= history.username %></td>
+                    <td><%= history.logindate %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

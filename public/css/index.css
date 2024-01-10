@@ -1,0 +1,69 @@
+/* /w:/Recent Courses/Web Development/Exam/Web Final/public/css/index.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px; /* Increase the font size */
+}
+
+.card {
+    padding: 40px; /* Increase the padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Increase the margin */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px; /* Increase the padding */
+    margin-bottom: 15px; /* Increase the margin */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px; /* Increase the padding */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
